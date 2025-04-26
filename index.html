@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOHAMAD HAIKAL HAKIMI</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('bcg.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            color: #2C3E50;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(44, 62, 80, 0.9);
+            padding: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+        .nav button {
+            background: #4A6470;
+            color: #F4F4F2;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .nav button:hover {
+            transform: scale(1.1);
+        }
+        .container {
+            max-width: 90%;
+            width: 800px;
+            background: rgba(234, 231, 220, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in;
+            margin: 80px auto 20px;
+            overflow: hidden;
+        }
+        .highlight {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .highlight img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 200px;
+        }
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .caption {
+            font-size: 14px;
+            color: #4A6470;
+            margin-top: 5px;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes moveText {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        h1, h2 {
+            color: #2C3E50;
+        }
+        .header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .section {
+            display: none;
+            margin-top: 20px;
+            text-align: justify;
+            padding: 0 10px;
+            color: #4A6470;
+            position: relative;
+            overflow: hidden;
+        }
+        .moving-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: moveText 10s linear infinite;
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .header img {
+                width: 80px;
+                height: 80px;
+            }
+            .nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 5px;
+            }
+        }
+    </style>
+    <script>
+        function toggleSection(id) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            const selectedSection = document.getElementById(id);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            toggleSection('home');
+        });
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <button onclick="toggleSection('home')">Home</button>
+        <button onclick="toggleSection('summary')">Summary</button>
+        <button onclick="toggleSection('skills')">Skills</button>
+        <button onclick="toggleSection('education')">Education</button>
+        <button onclick="toggleSection('projects')">Projects</button>
+        <button onclick="toggleSection('leadership')">Leadership</button>
+        <button onclick="toggleSection('volunteering')">Volunteering</button>
+        <button onclick="toggleSection('contact')">Contact</button>
+    </div>
+    <div class="container">
+        <div id="home" class="section" style="display: block;">
+            <h1>Welcome to My Professional Resume</h1>
+        </div>
+        <div class="header">
+            <img src="profile.png" alt="Your Picture">
+            <h1>MOHAMAD HAIKAL HAKIMI BIN SADARUDDIN</h1>
+            <p>Driven | Resourceful | Leadership-Oriented</p>
+        </div>
+        <div id="contact" class="section">
+            <p>Email: asmohdhaikalhakimi0726@gmail.com</p>
+            <p>Phone: (+60) 194381386</p>
+            <p>LinkedIn: linkedin.com/in/ashaikalam</p>
+            <p><strong>Reference Person</strong></p>
+            <ul>
+                <li>Dr. Azra Tilai (Pensyarah Kanan UiTM Cawangan Sarawak) | 019-8986464</li>
+                <li>Agnes Kanyan (Pensyarah Kanan UiTM Cawangan Sarawak) | 016-8781046</li>
+                <li>Yong Sze Wei (Pensyarah Kanan UiTM Cawangan Sarawak) | 019-8847926</li>
+            </ul>
+        </div>
+        <div id="summary" class="section">
+            <p>Motivated finance undergraduate with a strong foundation in financial concepts, leadership, and event management. Experienced in organizing large-scale events, managing student organizations, and fostering industry collaborations. Proficient in Microsoft Office, Canva, and HTML, with excellent communication and teamwork skills. Demonstrated ability to lead and coordinate projects, negotiate with stakeholders, and enhance financial literacy initiatives. Passionate about leveraging academic knowledge to contribute effectively in financial operations and projects.</p>
+        </div>
+        <div id="skills" class="section">
+            <ul>
+                <li><strong>Technical Skills</strong>:Microsoft Office (Excel, PowerPoint, Word), Canva, HTML, CapCut</li>
+                <li><strong>Soft Skills</strong>:Communication, leadership, problem-solving, teamwork</li>
+                <li><strong>Languages</strong>:English, Malay, Iban</li>
+            </ul>
+        </div>
+        <div id="volunteering" class="section">
+            <p><strong>Voluntering Services 2025</strong> - Blood Donation and Organ Pledging</p>
+            <ul>
+                <li>Assist at registration counter, helping senior citizen who unable to read and fill the form by themselves</li>
+                <li>Promote organ pledging among young citizen and raise funds for Malaysia Red Crescent Miri</li>
+            </ul>
+            <div class="highlight">
+                <div class="image-container">
+                <img src="IMG_0737.JPEG" alt="Contact Highlight 1">
+                <div class="caption">ST. JOSEPH ALUMNI CLUB BLOOD DONATION</div>
+                </div>
+                <div class="image-container">
+                <img src="IMG_0815.JPEG" alt="Contact Highlight 1">
+                <div class="caption">SOP FOUNDATION BLOOD DONATION</div>
+                </div>
+                <div class="image-container">
+                <img src="IMG_0874.JPEG" alt="Contact Highlight 1">
+                <div class="caption">ALPRO BLOOD DONATION AND INFLUENZA JAB</div>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="section">
+            <p><strong>Road Showcase</strong></p>
+            <ul>
+                <li>Promote projects that im involve in which is IDCT</li>
+                <li>Knowledge public about the important of digital and teknology to promote the germ of Sarawak that not been discover yet or low exposure</li>
+            </ul>
+            <div class="highlight">
+             <div class="image-container">
+                <img src="showcase.JPEG" alt="Contact Highlight 1">
+                <div class="caption">Showcase Held In Dayak Cultural Foundation, Kuching</div>
+                </div>
+            </div>
+            <p><strong>Dakwah Street and Distribute Questioneir</strong></p>
+            <ul>
+                <li>Interview public and do servey about effectiveness S-Pay Global during transaction</li>
+                <li>Knowledge public about Islamic Finance such explain about riba</li>
+            </ul>
+            <div class="highlight">
+             <div class="image-container">
+                <img src="IMG_6362.JPEG" alt="Contact Highlight 1">
+                <div class="caption">Interview Public</div>
+                </div>
+            </div>
+            <p><strong>Student Engagement with Industries</strong> - Yan Kun 2024</p>
+            <ul>
+                <li>Interview owner of the business</li>
+                <li>Seek advice and knowledge from the owner how to sustain in the industry especially after Pandemic Covid-19</li>
+            </ul>
+            <div class="highlight">
+             <div class="image-container">
+                <img src="IMG_4969.JPEG" alt="Contact Highlight 1">
+                <div class="caption">Group Photo with one of the staff</div>
+                </div>
+            </div>
+            <p><strong>Maybank Youth FUNancial Day</strong> - UiTM Sarawak - November 2024</p>
+            <ul>
+                <li>Managed an event attended by nearly 600 participants, fostering financial literacy</li>
+                <li>Secured a professional speaker to deliver insights on financial management</li>
+            </ul>
+            <p><strong>Co-Organizer ACS (Ampro Clash Series) EDU Tour Esports</strong> - UiTM Sarawak - October 2024</p>
+            <ul>
+                <li>Collaborated with CRIT Esports Malaysia Sdn Bhd to manage a competition with 80 participants</li>
+                <li>Facilitated logistical arrangements and event promotion across institutions such as UNIMAS, IPG Tunku Abdul Razak, Politeknik Kucing, i-Cats.</li>
+            </ul>
+            <p><strong>Impact Digital Community Tourism (IDCT2023)</strong> - Universities and Instituions in Sabah and Sarawak - August 2023 - September 2024</p>
+            <ul>
+                <li>Designed a digital platform to promote Kampung Kepayang, Simunjan’s tourism sector, products, and uniqueness</li>
+                <li>Demonstrated leadership and communication skills throughout the project.</li>
+            </ul>
+            <div class="highlight">
+                <div class="image-container">
+                <img src="kk.JPG" alt="Contact Highlight 1">
+                <div class="caption">IDCT2023- My teamates and Me give token of appreciation</div>
+                </div>
+                <div class="image-container">
+                <img src="award.JPEG" alt="Contact Highlight 1">
+                <div class="caption">IDCT2023- Received Award "Project Harapan"</div>
+                </div>
+            </div>
+            <p><strong>Project Leader-Kursus Asas Kayak Siri 1 (BAK)</strong> - UiTM Sarawak - November 2023</p>
+            <ul>
+                <li>Organized a kayaking course for approximately 30 participants, to prepare new atheletes for STAR1 which pretij certification.</li>
+                <li>Coordinated with a professional trainer, showcasing organizational and negotiation skills.</li>
+            </ul>
+            <div class="highlight">
+                <div class="image-container">
+                <img src="IMG_6100.JPEG" alt="Contact Highlight 1">
+                <div class="caption">Committee thats help me throughout the programme</div>
+                </div>
+                <div class="image-container">
+                <img src="IMG_8253.JPEG" alt="Contact Highlight 1">
+                <div class="caption">My penasihat kelab and Me give token of appreciation</div>
+                </div>
+            </div>
+        </div>
+        <div id="education" class="section">
+            <p><strong>Bachelor of Business Administration (Hons.) Finance</strong> - Univerisiti Teknologi MARA (UiTM), Sarawak Campus Samarahan, Expected Graduation: September 2025 | GPA: 3.22</p>
+            <p><strong>Diploma in Business Studies</strong> - Univerisiti Teknologi MARA (UiTM), Sarawak Campus Mukah, Graduated: March 2023 | CGPA: 3.33</p>
+            <p><strong>Sijil Pelajaran Malaysia (SPM)</strong> - Sekolah Menengah Kebangsaan Merbau Miri, Sarawak, Graduated: 2019 | Result: 5A 3B</p>
+            <p><strong>Pentafsiran Tingkatan Tiga (PT3)</strong> - Sekolah Menengah Kebangsaan Merbau Miri, Sarawak | Result: 5A 4B</p>
+        </div>
+        <div id="leadership" class="section">
+            <p><strong>Exco Pencarian Dana Program "Yuk Ke Jakarta 2025"</strong> - Jakarta, Indonesia</p>
+            <ul>
+                <li>Represented UiTM Sarawak and Malaysia as whole to promote and do exchange culture and knowledge</li>
+                <li>Seeks corporate, businesses, YB's and public to raise funds to do charity at Rumah Anak Yatim</li>
+            </ul>
+            <p><strong>Vice Secretary – Majlis Perwakilan Pelajar (MPP) 2023/2024</strong> - UiTM Sarawak.</p>
+            <ul>
+                <li>Represented approximately 9,000 students across three campuses</li>
+                <li>Coordinated formal documents including letters, memos, and event proposals and organized multiple activities</li>
+            </ul>
+            <p><strong>President – UiTM Sarawak Canoe Club (2023–2024)</strong> - UiTM Sarawak.</p>
+            <ul>
+                <li>Pioneered the establishment of the Canoe Club, assisting lecturers with the registration process</li>
+                <li>Successfully obtained 140 registered members during the club's first Open Day</li>
+            </ul>
+            <p><strong>Team Leader – UiTM Team in Sarawak Regatta and Padawan Raft Safari (2023 & 2024)</strong>
+            </p>
+            <ul>
+                <li>Coached a team of 30 athletes, focusing on proper techniques for the competition</li>
+                <li>One of the athlete and secured 3rd place in Padawan Raft Safari 2024</li>
+            </ul>
+            <p><strong>Committee Member – BAFIN (Bachelor of Finance Association) (2024/2025)</strong>
+            </p>
+            <ul>
+                <li>Organized events and talks to enhance industry collaboration as Public Relations Officer.</li>
+            </ul>
+            <p><strong>Sekretariat – MPP UiTM Mukah (2021/2022)</strong>
+            </p>
+            <ul>
+                <li>Supported campus management and student advocacy.</li>
+                <li>Promoted UiTM Mukah among SPM students and addressed student needs effectively</li>
+            </ul>
+            <p><strong>Member of Youth As Agent of Behaviral Change (YABC) 2019 - Present</strong>
+            </p>
+            <ul>
+                <li>Conduct activities that impact youth mindset</li>
+                <li>Promoted non-discrimination and huminity</li>
+            </ul>
+            <div class="highlight">
+                <div class="image-container">
+                <img src="YABC.JPG" alt="Contact Highlight 1">
+                <div class="caption">Youth Convention MRC 2023- Me and 2 others Youth As Agent Behaviral Changes Instructure</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
