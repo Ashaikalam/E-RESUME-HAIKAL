@@ -150,8 +150,9 @@
         });
     </script>
 </head>
-<body>
-    <div class="nav">
+<div class="nav">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <div class="nav-links">
         <button onclick="toggleSection('home')">Home</button>
         <button onclick="toggleSection('summary')">Summary</button>
         <button onclick="toggleSection('skills')">Skills</button>
@@ -161,6 +162,7 @@
         <button onclick="toggleSection('volunteering')">Volunteering</button>
         <button onclick="toggleSection('contact')">Contact</button>
     </div>
+</div>
     <div class="container">
         <div id="home" class="section" style="display: block;">
             <h1>Welcome to My Professional Resume</h1>
